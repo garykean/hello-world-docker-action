@@ -2,8 +2,8 @@
 
 echo "Hello $1"
 time=$(date)
-echo "time=$time" >> $GITHUB_OUTPUT
+echo "time=$time"
 
 echo "Installing API Catalog"
-RUN npm i api-catalog-cli
+RUN npm i api-catalog-cli >> $GITHUB_OUTPUT
 echo "Installed"
