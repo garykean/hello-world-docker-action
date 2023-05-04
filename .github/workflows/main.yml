@@ -29,8 +29,8 @@ jobs:
       - name: Another way to call an API
         uses: fjogeleit/http-request-action@v1
         with:
-          url: 'https://ansible.io/api/v2/job_templates/84/launch/'
-          method: 'POST'
+          url: 'https://example.com/api/v2/endpoint'
+          method: 'GET'
           username: hello
           password: world
           customHeaders: '{"Content-Type": "application/json"}'
