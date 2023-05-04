@@ -23,3 +23,6 @@ jobs:
         run: npm install -g api-catalog-cli@latest
       - name: Catalog an API
         run: api-catalog help
+      - name: REST API with curl
+        run: |
+          curl -X GET "https://example.com/api/v2/endpoint"
