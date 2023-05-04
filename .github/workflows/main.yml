@@ -19,3 +19,5 @@ jobs:
         run: echo "The time was ${{ steps.hello.outputs.time }}"
       - name: Use Node.js
         uses: actions/setup-node@v3
+      - name: Install API Catalog CLI
+        run: npm i api-catalog-cli
