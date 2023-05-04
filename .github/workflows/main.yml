@@ -31,7 +31,5 @@ jobs:
         with:
           url: 'https://example.com/api/v2/endpoint'
           method: 'GET'
-          username: hello
-          password: world
           customHeaders: '{"Content-Type": "application/json"}'
           data: '{"key_1": "value_1", "key_2": "value_2"}'
