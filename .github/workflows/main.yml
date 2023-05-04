@@ -18,7 +18,7 @@ jobs:
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
       - name: Node Js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2.5.2
 
       - name: SSH and deploy node app
         uses: appleboy/ssh-action@master        
