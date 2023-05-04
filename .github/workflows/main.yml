@@ -26,3 +26,12 @@ jobs:
       - name: REST API with curl
         run: |
           curl -X GET "https://example.com/api/v2/endpoint"
+      - name: Another way to call an API
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://ansible.io/api/v2/job_templates/84/launch/'
+          method: 'POST'
+          username: hello
+          password: world
+          customHeaders: '{"Content-Type": "application/json"}'
+          data: '{"key_1": "value_1", "key_2": "value_2"}'
