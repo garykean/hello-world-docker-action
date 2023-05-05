@@ -35,4 +35,4 @@ jobs:
           customHeaders: '{"Content-Type": "application/json"}'
           data: '{"key_1": "value_1", "key_2": "value_2"}'
       - name: Get the output time
-        run: echo "Result from API ${{ fromJson(steps.api.outputs.reponse).url }}"
+        run: echo ${{ fromJson(steps.api.outputs.response).url }}
