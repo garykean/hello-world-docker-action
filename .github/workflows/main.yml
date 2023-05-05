@@ -38,6 +38,6 @@ jobs:
         run: echo ${{ fromJson(steps.api.outputs.response).url }}
       - name: Create governance report
         uses: "finnp/create-file-action@master"
-          env:
-            FILE_NAME: "dir/fileName.txt"
-            FILE_DATA: "file content"
+        env:
+          FILE_NAME: "dir/governance report.txt"
+          FILE_DATA: steps.api.outputs.response
