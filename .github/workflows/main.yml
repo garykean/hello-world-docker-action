@@ -28,8 +28,11 @@ jobs:
           curl -X GET "https://example.com/api/v2/endpoint"
       - name: Another way to call an API
         uses: fjogeleit/http-request-action@v1
+        id: api
         with:
           url: 'https://httpbin.org/get'
           method: 'GET'
           customHeaders: '{"Content-Type": "application/json"}'
           data: '{"key_1": "value_1", "key_2": "value_2"}'
+      - name: Get the output time
+        run: echo "Result from API ${{ fromJson(steps.api.outputs.reponse).url }}"
