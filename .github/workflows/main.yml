@@ -34,5 +34,10 @@ jobs:
           method: 'GET'
           customHeaders: '{"Content-Type": "application/json"}'
           data: '{"key_1": "value_1", "key_2": "value_2"}'
-      - name: Get the output time
+      - name: Process the response data
         run: echo ${{ fromJson(steps.api.outputs.response).url }}
+      - name: Create governance report
+        uses: "finnp/create-file-action@master"
+          env:
+            FILE_NAME: "dir/fileName.txt"
+            FILE_DATA: "file content"
